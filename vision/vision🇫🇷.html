@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyros Vision | Sécurité Visuelle</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      padding-bottom: 4rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #8b5cf6, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .vision-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #a855f7;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .vision-card:hover {
+      transform: translateY(-3px);
+      border-left-color: #d946ef;
+      box-shadow: 0 8px 20px rgba(216, 70, 239, 0.25);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: linear-gradient(to bottom, #1d1233, #2b1b46);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #a66cff, #6d28d9);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #c084fc, #9333ea);
+    }
+  </style>
+</head>
+
+<body class="px-6 py-10 md:px-20">
+
+  <!-- Titre principal -->
+  <header class="mb-16 text-center">
+    <h1 class="text-5xl font-bold gradient-text">Nyros Vision</h1>
+    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+      Un module professionnel de sécurité visuelle conçu pour protéger vos environnements en temps réel.
+    </p>
+  </header>
+
+  <!-- Sections -->
+  <main class="max-w-4xl mx-auto space-y-8">
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">🎥 Connexion aux caméras</h2>
+      <p>Nyros Vision se connecte aux caméras compatibles (Wi-Fi, Bluetooth) pour analyser les flux vidéos en direct et surveiller les zones critiques.</p>
+    </div>
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">🧠 Détection intelligente</h2>
+      <p>Détection de comportements anormaux, mouvements suspects ou absences prolongées grâce à une IA locale ultra réactive.</p>
+    </div>
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">🧒 Protection des proches</h2>
+      <p>Idéal pour la sécurité des enfants, personnes âgées ou isolées. Nyros apprend les habitudes et vous alerte en cas d’écart significatif.</p>
+    </div>
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">📊 Historique intelligent</h2>
+      <p>Toutes les détections sont enregistrées (heure, type, durée). Vous pouvez y accéder depuis le tableau de bord Nyros en un clic.</p>
+    </div>
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">📡 Mode hors-ligne</h2>
+      <p>Fonctionne même sans connexion Internet. Notifications locales via votre réseau personnel ou alertes visuelles configurables.</p>
+    </div>
+
+    <div class="vision-card">
+      <h2 class="text-2xl font-semibold text-purple-400 mb-2">🔐 Sécurité et confidentialité</h2>
+      <p>Cryptage complet des flux. Aucun partage extérieur sans votre autorisation. Vous gardez le contrôle total sur les données et accès.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 text-center text-gray-500 text-sm">
+    <p>© 2025 Nyros AI. Tous droits réservés.</p>
+    <p class="mt-1">Module Vision développé par l’équipe officielle de Nyros</p>
+    <div class="mt-4">
+      <a href="../index🇫🇷.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-xl shadow-md transition duration-200">
+        ← Revenir à Nyros
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
