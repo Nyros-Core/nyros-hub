@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyros AI | 404 Page </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      overflow: hidden;
+      color: #e0e7ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .glitch {
+      font-size: 3.5rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #a855f7, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: glow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #a855f7; }
+      to { text-shadow: 0 0 30px #d946ef; }
+    }
+
+    .glow-box {
+      background: rgba(91, 33, 182, 0.12);
+      border: 2px solid #8b5cf6;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 550px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    .code-box {
+      background: linear-gradient(90deg, #9333ea, #d946ef);
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.75rem;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      display: inline-block;
+      box-shadow: 0 0 20px #9333ea;
+      animation: pulse 3s infinite;
+    }
+
+    .btn-back {
+      margin-top: 2.5rem;
+      background: #8b5cf6;
+      padding: 0.8rem 2rem;
+      border-radius: 1rem;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: #d946ef;
+      box-shadow: 0 0 15px #d946ef;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(217, 70, 239, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(217, 70, 239, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(217, 70, 239, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="glitch">404 — You're Lost in Nyros</h1>
+
+  <div class="glow-box">
+    <p class="text-lg text-purple-300 mb-2">Oops... this page doesn’t exist or has been moved.</p>
+    <p class="text-base text-gray-200 font-semibold">But here's a small gift for you 👇</p>
+    <div class="code-box">NYROS404-10</div>
+    <p class="mt-2 text-sm text-gray-400 italic">Promo code for –10% off, usable once per user.</p>
+  </div>
+
+  <a href="../index.html" class="btn-back">← Return to Nyros</a>
+
+</body>
+</html>
