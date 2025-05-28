@@ -1,0 +1,190 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyros-Core | Промокоды</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .feature-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+    }
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+    }
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6; }
+      to { text-shadow: 0 0 10px #fff, 0 0 20px #d946ef, 0 0 30px #d946ef; }
+    }
+    .hexagon {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+
+    /* 🎨 Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #1d1233, #2b1b46);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a66cff, #6d28d9);
+  border-radius: 0; /* 👈 Important : 0 pour un coin carré */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+}
+  </style>
+
+
+
+<!-- как работают промокоды -->
+<section class="max-w-4xl mx-auto mt-20 text-gray-200 text-sm space-y-10">
+
+  <!-- Блок: Автоматический промокод -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h2 class="text-2xl font-bold text-purple-300 text-center mb-4">
+      🌟 Официальное описание: Система промокодов Nyros AI
+    </h2>
+    <h3 class="text-xl text-purple-400 font-semibold mb-2">
+      🔓 Автоматический код при регистрации
+    </h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>✅ Промокод активируется автоматически при создании аккаунта</li>
+      <li>🎁 Даёт <strong>скидку 50%</strong> на все тарифы</li>
+      <li>⏱️ Длительность действия: <strong>1 месяц</strong></li>
+      <li>➕ Вводить ничего не нужно, всё происходит автоматически</li>
+    </ul>
+  </div>
+
+  <!-- Блок: Ручные коды -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-xl text-purple-400 font-semibold mb-4">
+      🧩 Другие типы кодов
+    </h3>
+    <div class="overflow-auto">
+      <table class="w-full table-auto border border-purple-800 text-left">
+        <thead class="bg-purple-800 text-purple-100">
+          <tr>
+            <th class="p-2">Тип кода</th>
+            <th class="p-2">Что он даёт</th>
+            <th class="p-2">📅 Доступен для ввода</th>
+            <th class="p-2">⏱️ Срок действия</th>
+            <th class="p-2">Примечания</th>
+          </tr>
+        </thead>
+        <tbody class="bg-purple-950 bg-opacity-30">
+          <tr class="border-t border-purple-800">
+            <td class="p-2">🎁 Бесплатная проба</td>
+            <td class="p-2">Полный доступ к Premium</td>
+            <td class="p-2">1 месяц</td>
+            <td class="p-2">7 дней</td>
+            <td class="p-2">1 раз на аккаунт</td>
+          </tr>
+          <tr class="border-t border-purple-800">
+            <td class="p-2">🎟️ Скидка 50%</td>
+            <td class="p-2">Скидка 50% на один тариф</td>
+            <td class="p-2">1 месяц</td>
+            <td class="p-2">1 месяц</td>
+            <td class="p-2">Выдаётся за задания или по почте</td>
+          </tr>
+          <tr class="border-t border-purple-800">
+            <td class="p-2">⭐ Бонусные баллы</td>
+            <td class="p-2">Баллы на персонализацию</td>
+            <td class="p-2">1 месяц</td>
+            <td class="p-2">15 дней</td>
+            <td class="p-2">Для аватаров, маскотов и т.д.</td>
+          </tr>
+          <tr class="border-t border-purple-800">
+            <td class="p-2">🧠 Специальный DEV-код</td>
+            <td class="p-2">Разблокировка функций ИИ</td>
+            <td class="p-2">4 месяца</td>
+            <td class="p-2">Максимум 1 год</td>
+            <td class="p-2">🔐 Такие коды выдают только разработчики</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Блок: Как работают коды -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-xl text-purple-400 font-semibold mb-2">
+      ⏳ Важные детали — Как работают коды
+    </h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>📅 <strong>Доступен для ввода</strong>: время, в течение которого можно ввести код (например, в течение месяца после получения)</li>
+      <li>⏱️ <strong>Срок действия</strong>: сколько действует код после активации (например, 7 дней, 1 месяц...)</li>
+      <li>❌ Коды автоматически удаляются, если не используются в течение 4 месяцев</li>
+      <li>⛓️ Ни один код не может работать более 1 года (даже DEV)</li>
+    </ul>
+  </div>
+
+  <!-- Блок: Безопасность -->
+  <div class="max-w-2xl mx-auto mt-10 p-6 bg-purple-800 bg-opacity-20 rounded-2xl border border-purple-600 shadow-lg text-gray-100">
+    <h3 class="text-xl font-bold text-purple-300 mb-4 flex items-center gap-2">
+      <span>🔐</span> Безопасность и ограничения
+    </h3>
+    <ul class="space-y-2 text-[0.95rem] leading-snug">
+      <li>✅ <strong>1 код = 1 использование</strong> на одного пользователя</li>
+      <li>🚫 Поддельные или расшаренные коды не работают</li>
+      <li>🧠 Nyros всегда показывает дружелюбное сообщение при ошибке</li>
+      <li>♻️ Все коды отслеживаются и отключаются при нарушениях</li>
+      <li>⚠️ Если кто-то попытается обмануть систему более <strong>5 раз</strong>, появится предупреждение.<br>
+        ➤ При <strong>10 попытках</strong> тариф блокируется на <strong>10 дней</strong> (бесплатно во время блокировки).
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+ <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 Nyros-Core. Все права защищены.</p>
+                <p class="mt-2">Категория: Проект искусственного интеллекта</p>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- revenir a nyros -->
+    <a href="../index🇷🇺.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-xl shadow-md transition duration-200">
+  🔙 Вернуться к Nyros
+</a>
+

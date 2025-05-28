@@ -1,0 +1,219 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyros-Core | Misión y recompensas</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .feature-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+    }
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+    }
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6; }
+      to { text-shadow: 0 0 10px #fff, 0 0 20px #d946ef, 0 0 30px #d946ef; }
+    }
+    .hexagon {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+
+    /* 🎨 Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #1d1233, #2b1b46);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a66cff, #6d28d9);
+  border-radius: 0; /* 👈 Important : 0 pour un coin carré */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+}
+  </style>
+
+<!-- 🎮 Sistema de Misiones y Puntos - Nyros AI -->
+<section class="max-w-5xl mx-auto mt-20 text-gray-200 text-sm space-y-10">
+
+  <!-- Objetivo -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h2 class="text-2xl font-bold text-purple-300 mb-4">🎮 Sistema de Misiones y Puntos – Nyros AI</h2>
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🧩 Objetivo general</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Ganar puntos personalizados</li>
+      <li>Recompensar el uso regular e inteligente de Nyros</li>
+      <li>Desbloquear bonificaciones sin pagar</li>
+    </ul>
+  </div>
+
+  <!-- Puntos personalizados -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🪙 Puntos personalizados (ej.: NyrosPoints)</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Se obtienen completando misiones o acciones especiales</li>
+      <li>100 % merecidos, nunca se compran con dinero</li>
+    </ul>
+
+    <h4 class="text-base text-purple-300 font-semibold mt-4 mb-2">📊 Uso de los puntos:</h4>
+    <table class="w-full table-auto border border-purple-800 text-left">
+      <thead class="bg-purple-800 text-purple-100">
+        <tr>
+          <th class="p-2">Uso</th>
+          <th class="p-2">Costo</th>
+        </tr>
+      </thead>
+      <tbody class="bg-purple-950 bg-opacity-30">
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎭 Cambiar la mascota (Néros)</td>
+          <td class="p-2">250 puntos</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎨 Personalizar la interfaz</td>
+          <td class="p-2">500 puntos</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🧠 Desbloquear un estilo especial de IA</td>
+          <td class="p-2">1000 puntos</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🏱️ Descuento del -25 % en un plan</td>
+          <td class="p-2">1500 puntos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Misiones disponibles -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🌟 Sistema de Misiones (máx 11)</h3>
+    <p class="text-sm mb-3">🔐 Máximo de 11 misiones activas o disponibles por usuario. Renovables cada 30 días o reemplazables por el administrador.</p>
+    <table class="w-full table-auto border border-purple-800 text-left text-sm">
+      <thead class="bg-purple-800 text-purple-100">
+        <tr>
+          <th class="p-2">Tipo</th>
+          <th class="p-2">Ejemplo de misión</th>
+          <th class="p-2">Recompensa</th>
+        </tr>
+      </thead>
+      <tbody class="bg-purple-950 bg-opacity-30">
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🗣️ Conversación</td>
+          <td class="p-2">Habla con Nyros durante 10 días</td>
+          <td class="p-2">+100 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">📚 Conocimiento</td>
+          <td class="p-2">Responde correctamente a una pregunta difícil</td>
+          <td class="p-2">+120 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🔍 Curiosidad</td>
+          <td class="p-2">Haz clic en un elemento oculto</td>
+          <td class="p-2">+200 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">⌛ Lealtad</td>
+          <td class="p-2">Vuelve 7 días seguidos</td>
+          <td class="p-2">+180 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎟️ Código oculto</td>
+          <td class="p-2">Encuentra un código promocional en el chat</td>
+          <td class="p-2">+300 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🧹 Prueba de bugs</td>
+          <td class="p-2">Ayuda a encontrar un error</td>
+          <td class="p-2">+400 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🔀 Repetición</td>
+          <td class="p-2">Habla del mismo tema 3 veces en una semana</td>
+          <td class="p-2">+80 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">👤 Invitación</td>
+          <td class="p-2">Recomienda Nyros a un amigo</td>
+          <td class="p-2">+150 pts</td>
+        </tr>
+<tr class="border-t border-purple-800">
+  <td class="p-2">🥚 Huevo de Pascua</td>
+  <td class="p-2">Misión oculta</td>
+  <td class="p-2">+300 pts</td>
+</tr>
+
+
+        <tr class="border-t border-purple-800">
+  <td class="p-2">📲 Inicio de sesión multiplataforma</td>
+  <td class="p-2">Inicia sesión en Nyros desde un segundo dispositivo seguro (distinto al principal)</td>
+  <td class="p-2">+510 pts</td>
+</tr>
+
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎂 Evento</td>
+          <td class="p-2">Misión especial para un día concreto (actualización, Halloween, Navidad, etc.)</td>
+          <td class="p-2">+500 pts</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Seguridad -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🔒 Seguridad y reglas</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Máximo 11 misiones por usuario</li>
+      <li>Los puntos no son canjeables por dinero</li>
+      <li>Hacer trampa = pérdida de puntos y bloqueo</li>
+      <li>El progreso es visible en el panel de control</li>
+    </ul>
+  </div>
+
+</section>
+
+
+      <!-- revenir a nyros -->
+<a href="../index🇪🇸.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-xl shadow-md transition duration-200">
+     Volver a Nyros
+</a>

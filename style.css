@@ -1,0 +1,114 @@
+/* 🌐 RESET DE BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🖥️ STYLES PAR DÉFAUT (PC / GRANDS ÉCRANS) */
+body {
+  font-size: 18px;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.status-button, .language-button {
+  font-size: 18px;
+  padding: 14px 24px;
+  border-radius: 30px;
+  border: none;
+  width: auto;
+}
+
+/* 📱 PETITS TÉLÉPHONES - ≤ 480px */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .status-button, .language-button {
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  .logo-container h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px 10px;
+  }
+}
+
+/* 📱 TÉLÉPHONES MOYENS / TABLETTES - ≤ 768px */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .status-button, .language-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+}
+
+/* 💻 TABLETTES / PETITS ORDINATEURS - ≤ 1024px */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .status-button {
+    font-size: 17px;
+  }
+
+  nav a {
+    margin-left: 12px;
+  }
+}

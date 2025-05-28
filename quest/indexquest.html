@@ -1,0 +1,217 @@
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyros-Core | Quest and rewards</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .feature-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+    }
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+    }
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6; }
+      to { text-shadow: 0 0 10px #fff, 0 0 20px #d946ef, 0 0 30px #d946ef; }
+    }
+    .hexagon {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    /* 🎨 Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #1d1233, #2b1b46);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a66cff, #6d28d9);
+  border-radius: 0; /* 👈 Important : 0 pour un coin carré */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+}
+  </style>
+
+  <!-- 🎮 Quest & Points System - Nyros AI -->
+<section class="max-w-5xl mx-auto mt-20 text-gray-200 text-sm space-y-10">
+
+  <!-- Objective -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h2 class="text-2xl font-bold text-purple-300 mb-4">🎮 Quest & Points System – Nyros AI</h2>
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🧩 Main Objective</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Earn personalized points</li>
+      <li>Reward smart and regular use of Nyros</li>
+      <li>Unlock bonuses without paying</li>
+    </ul>
+  </div>
+
+  <!-- Custom Points -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🪙 Custom Points (e.g., NyrosPoints)</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Earned by completing quests or special actions</li>
+      <li>100% earned, never purchasable with money</li>
+    </ul>
+
+    <h4 class="text-base text-purple-300 font-semibold mt-4 mb-2">📊 How to use your points:</h4>
+    <table class="w-full table-auto border border-purple-800 text-left">
+      <thead class="bg-purple-800 text-purple-100">
+        <tr>
+          <th class="p-2">Use</th>
+          <th class="p-2">Cost</th>
+        </tr>
+      </thead>
+      <tbody class="bg-purple-950 bg-opacity-30">
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎭 Change mascot (Néros)</td>
+          <td class="p-2">250 points</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎨 Change visual interface</td>
+          <td class="p-2">500 points</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🧠 Unlock special AI style</td>
+          <td class="p-2">1000 points</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🏱️ -25% discount on a plan</td>
+          <td class="p-2">1500 points</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Available Quests -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🌟 Quest System (max 11)</h3>
+    <p class="text-sm mb-3">🔐 Max 11 quests per user at a time. They can refresh every 30 days or be replaced by admin.</p>
+    <table class="w-full table-auto border border-purple-800 text-left text-sm">
+      <thead class="bg-purple-800 text-purple-100">
+        <tr>
+          <th class="p-2">Type</th>
+          <th class="p-2">Quest example</th>
+          <th class="p-2">Reward</th>
+        </tr>
+      </thead>
+      <tbody class="bg-purple-950 bg-opacity-30">
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🗣️ Conversation</td>
+          <td class="p-2">Talk with Nyros for 10 days</td>
+          <td class="p-2">+100 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">📚 Knowledge</td>
+          <td class="p-2">Answer a difficult question</td>
+          <td class="p-2">+120 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🔍 Curiosity</td>
+          <td class="p-2">Click on a hidden element</td>
+          <td class="p-2">+200 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">⌛ Loyalty</td>
+          <td class="p-2">Come back 7 days in a row</td>
+          <td class="p-2">+180 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎟️ Hidden Code</td>
+          <td class="p-2">Find a promo code during a chat</td>
+          <td class="p-2">+300 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🧹 Debug Test</td>
+          <td class="p-2">Help find a bug</td>
+          <td class="p-2">+400 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🔀 Loop</td>
+          <td class="p-2">Talk about the same topic 3 times in a week</td>
+          <td class="p-2">+80 pts</td>
+        </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">👤 Invite</td>
+          <td class="p-2">Introduce Nyros to a friend</td>
+          <td class="p-2">+150 pts</td>
+        </tr>
+<tr class="border-t border-purple-800">
+  <td class="p-2">🥚 Easter Egg</td>
+  <td class="p-2">Hidden quest</td>
+  <td class="p-2">+300 pts</td>
+</tr>
+
+
+         <tr class="border-t border-purple-800">
+         <td class="p-2">📲 Multi-device login</td>
+         <td class="p-2">Log in to Nyros from a second secure device (other than the main device)</td>
+         <td class="p-2">+510 pts</td>
+       </tr>
+        <tr class="border-t border-purple-800">
+          <td class="p-2">🎂 Event</td>
+          <td class="p-2">Special quest for a specific day (update, Halloween, Christmas, etc.)</td>
+          <td class="p-2">+500 pts</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Security -->
+  <div class="bg-purple-900 bg-opacity-20 border border-purple-700 rounded-xl p-6">
+    <h3 class="text-lg text-purple-400 font-semibold mb-2">🔒 Security & Rules</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Max 11 quests per user</li>
+      <li>Points are not exchangeable for real money</li>
+      <li>Cheating = points removed + quest system blocked</li>
+      <li>Progress can be viewed in the dashboard</li>
+    </ul>
+  </div>
+
+</section>
+
+
+    <!-- revenir a nyros -->
+<a href="../index.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-xl shadow-md transition duration-200">
+   Back to Nyros
+</a>
